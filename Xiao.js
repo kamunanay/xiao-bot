@@ -17,7 +17,8 @@ module.exports.Solving = async (ganz, store) => {
   ganz.ev.on('messages.upsert', async (message) => {
     const msg = message.messages[0];
     if (!msg.message) return;
-    
+
+    console.log("Pesan diterima:", body); 
     const body = msg.message.conversation || (msg.message.extendedTextMessage && msg.message.extendedTextMessage.text) || '';
     const sender = msg.key.remoteJid;
     const from = msg.key.remoteJid;
