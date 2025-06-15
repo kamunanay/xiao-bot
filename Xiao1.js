@@ -1,41 +1,6 @@
 process.on('uncaughtException', console.error);
 process.on('unhandledRejection', console.error);
 
-// Initialize global variables if not set
-global.prefix = global.prefix || '.';
-global.namaBot = global.namaBot || '🌟 Xiao RPG Bot';
-global.namaOwner = global.namaOwner || 'Owner';
-global.versi = global.versi || '1.0';
-global.owner = global.owner || '6281295344364';
-global.linkSaluran = global.linkSaluran || '-';
-global.characters = global.characters || {
-  elements: ['Api', 'Air', 'Angin', 'Tanah', 'Petir'],
-  equipments: {
-    armor: [
-      { id: 1, name: 'Jirah Kayu', defense: 5, price: 200 },
-      { id: 2, name: 'Jirah Besi', defense: 10, price: 500 },
-      { id: 3, name: 'Jirah Naga', defense: 20, price: 1500 }
-    ],
-    weapons: [
-      { id: 4, name: 'Pedang Kayu', attack: 5, price: 300 },
-      { id: 5, name: 'Pedang Besi', attack: 10, price: 800 },
-      { id: 6, name: 'Pedang Naga', attack: 20, price: 2000 }
-    ],
-    pills: [
-      { id: 7, name: 'Pil Qi', effect: "health", value: 50, price: 150 },
-      { id: 8, name: 'Pil Kekuatan', effect: "strength", value: 5, price: 200 },
-      { id: 9, name: 'Pil Langit', effect: "health", value: 200, price: 1000 }
-    ]
-  },
-  monsters: [
-    { name: 'Slime', health: 50, strength: 5, exp: 20, coin: 50 },
-    { name: 'Goblin', health: 100, strength: 10, exp: 50, coin: 100 },
-    { name: 'Serigala', health: 150, strength: 15, exp: 80, coin: 150 }
-  ]
-};
-
-global.db = global.db || { users: {}, redeemCodes: {} };
-
 require('./settings');
 const { pickRandom, getItemById, formatDuration, randomInt, isOwner, sleep } = require('./function');
 
