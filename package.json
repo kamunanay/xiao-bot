@@ -1,0 +1,22 @@
+{
+  "name": "xiao-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp Bot RPG Donghua",
+  "main": "start.js",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.0",
+    "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@latest",
+    "axios": "^0.24.0",
+    "cfonts": "^3.3.0",
+    "chalk": "^4.1.2",
+    "human-readable": "^0.2.1",
+    "jimp": "^0.22.3",
+    "moment-timezone": "^0.5.43",
+    "pino": "^9.4.0",
+    "js-confuser": "^1.7.3",
+    "ruhend-scraper": "^8.0.8"
+  }
+}
