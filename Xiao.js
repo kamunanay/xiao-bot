@@ -15,15 +15,18 @@ const totalfitur = () => {
 
 const createBox = (title, content) => {
   const lines = content.split('\n');
-  const maxLength = Math.max(...lines.map(line => line.length), titleLength = title.length;
-  const topBorder = '╔' + '═'.repeat(Math.max(maxLength, titleLength) + 2) + '╗';
-  const bottomBorder = '╚' + '═'.repeat(Math.max(maxLength, titleLength) + 2) + '╝';
+  const titleLength = title.length;
+  const contentLength = Math.max(...lines.map(line => line.length));
+  const maxLength = Math.max(titleLength, contentLength);
   
-  let box = `${topBorder}\n║  ${title.padEnd(Math.max(maxLength, titleLength))}  ║\n`;
-  box += '╠' + '═'.repeat(Math.max(maxLength, titleLength) + 2) + '╣\n';
+  const topBorder = '╔' + '═'.repeat(maxLength + 4) + '╗';
+  const bottomBorder = '╚' + '═'.repeat(maxLength + 4) + '╝';
+  const separator = '╠' + '═'.repeat(maxLength + 4) + '╣';
+  
+  let box = `${topBorder}\n║  ${title.padEnd(maxLength)}  ║\n${separator}\n`;
   
   lines.forEach(line => {
-    box += `║  ${line.padEnd(Math.max(maxLength, titleLength))}  ║\n`;
+    box += `║  ${line.padEnd(maxLength)}  ║\n`;
   });
   
   box += bottomBorder;
