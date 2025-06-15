@@ -67,7 +67,7 @@ async function startingBot() {
     });
 
     if (pairingCode && !ganz.authState.creds.registered) {
-      const correctAnswer = 'Omak';
+      const correctAnswer = 'xiao';
       let attempts = 0;
       let maxAttempts = 3;
       let verified = false;
