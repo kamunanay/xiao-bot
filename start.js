@@ -18,7 +18,7 @@ const {
 const pairingCode = true;
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 const question = (text) => new Promise((resolve) => rl.question(text, resolve));
-const database = new (require('./database'))();
+const database = new (require('./database.js'))();
 
 (async () => {
   const loadData = await database.read();
